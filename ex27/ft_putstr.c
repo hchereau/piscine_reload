@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   display_file.h                                     :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hchereau <hchereau@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/11 20:07:49 by hchereau          #+#    #+#             */
-/*   Updated: 2024/05/12 20:49:05 by hchereau         ###   ########.fr       */
+/*   Created: 2024/05/12 20:43:06 by hchereau          #+#    #+#             */
+/*   Updated: 2024/05/12 20:48:11 by hchereau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DISPLAY_FILE_H
-# define DISPLAY_FILE_H
+#include "display_file.h"
 
-# include <unistd.h>
-# include <fcntl.h>
+static int	ft_strlen(char *str)
+{
+	int	i;
 
-# define BUFFER_SIZE 50
+	i = 0;
+	while (str[i] != '\0')
+	{
+		++i;
+	}
+	return (i);
+}
 
-void	ft_putstr(char *str);
-void	print_file(char *file_path);
-
-#endif
+void	ft_putstr(char *str)
+{
+	write(STDOUT_FILENO, str, ft_strlen(str));
+}
