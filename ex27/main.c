@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hchereau <hchereau@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hucherea <hucherea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 21:47:13 by hchereau          #+#    #+#             */
-/*   Updated: 2024/05/12 15:50:00 by hchereau         ###   ########.fr       */
+/*   Updated: 2024/05/14 14:13:23 by hucherea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,4 @@ int	main(int ac, char **av)
 	{
 		print_file(av[1]);
 	}
-
 }

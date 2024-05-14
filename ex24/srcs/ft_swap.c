@@ -1,42 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_params.c                                  :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hucherea <hucherea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/20 17:46:58 by hucherea          #+#    #+#             */
-/*   Updated: 2024/05/14 14:11:07 by hucherea         ###   ########.fr       */
+/*   Created: 2024/05/11 16:42:24 by hchereau          #+#    #+#             */
+/*   Updated: 2024/05/14 13:55:59 by hucherea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-size_t	ft_strlen(char *str)
+void	ft_swap(int *a, int *b)
 {
-	size_t	i;
+	int	swap;
 
-	i = 0;
-	while (str[i] != '\0')
-		++i;
-	return (i);
-}
-
-void	ft_putstr(char *str)
-{
-	write(1, str, ft_strlen(str));
-}
-
-int	main(int ac, char **av)
-{
-	int	i;
-
-	i = 1;
-	while (i < ac)
-	{
-		ft_putstr(av[i]);
-		write(STDOUT_FILENO, "\n", 1);
-		++i;
-	}
-	return (0);
+	swap = *a;
+	*a = *b;
+	*b = swap;
 }

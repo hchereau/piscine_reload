@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_params.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hucherea <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hucherea <hucherea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 19:02:38 by hucherea          #+#    #+#             */
-/*   Updated: 2024/02/21 09:05:12 by hucherea         ###   ########.fr       */
+/*   Updated: 2024/05/14 14:11:22 by hucherea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	ft_swap(char **a, char **b)
 
 int	main(int ac, char **av)
 {
-	int i_start;
+	int	i_start;
 	int	i_tri;
 
 	i_start = 1;

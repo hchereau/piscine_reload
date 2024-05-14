@@ -1,42 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_params.c                                  :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hucherea <hucherea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/20 17:46:58 by hucherea          #+#    #+#             */
-/*   Updated: 2024/05/14 14:11:07 by hucherea         ###   ########.fr       */
+/*   Created: 2024/05/11 18:03:48 by hchereau          #+#    #+#             */
+/*   Updated: 2024/05/14 14:04:40 by hucherea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-size_t	ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-	size_t	i;
+	int	counter;
 
-	i = 0;
-	while (str[i] != '\0')
-		++i;
-	return (i);
-}
-
-void	ft_putstr(char *str)
-{
-	write(1, str, ft_strlen(str));
-}
-
-int	main(int ac, char **av)
-{
-	int	i;
-
-	i = 1;
-	while (i < ac)
+	counter = 0;
+	while (str[counter] != '\0')
 	{
-		ft_putstr(av[i]);
-		write(STDOUT_FILENO, "\n", 1);
-		++i;
+		++counter;
 	}
-	return (0);
+	return (counter);
 }

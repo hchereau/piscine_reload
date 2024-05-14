@@ -1,17 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
+/*   ft_recursive_factiorial.c                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hucherea <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hucherea <hucherea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 15:37:55 by hucherea          #+#    #+#             */
-/*   Updated: 2024/02/21 08:21:10 by hucherea         ###   ########.fr       */
+/*   Updated: 2024/05/13 16:36:00 by hucherea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_recursive_factorial(int nb)
 {
+	if (nb >= 12)
+	{
+		return (0);
+	}
 	if (nb == 1 || nb == 0)
 		return (1);
 	else if (nb < 0)
