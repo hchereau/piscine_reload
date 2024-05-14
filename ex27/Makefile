@@ -4,7 +4,7 @@ NAME := ft_display_file
 
 SRCS += main.c
 SRCS += print_file.c
-SRCS +=
+SRCS += ft_putstr.c
 
 ### HEADER #####################################################################
 
@@ -44,6 +44,3 @@ re: fclean
 	$(MAKE)
 
 .PHONY: all clean fclean
-
-
-
