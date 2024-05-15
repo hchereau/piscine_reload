@@ -44,21 +44,19 @@ endif
 all: $(NAME)
 
 $(NAME): $(OBJS)
-		$(AR) rcs $@ $^
+	$(AR) rcs $(NAME) $(OBJS)
 
-$(OBJS): $(PATH_OBJS)/%.o: %.c $(HEADER)
-		mkdir -p $(PATH_OBJS)
-		$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDES)
+$(OBJS): $(PATH_OBJS)/%.o: %.c
+	mkdir -p $(PATH_OBJS)
+	$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDES)
 
 clean:
-		$(RM) -r $(PATH_OBJS)
-		$(MAKE) -C $(TEST_FOLDER) clean
+	$(RM) -r $(PATH_OBJS)
 
 fclean: clean
-		$(RM) $(NAME)
+	$(RM) $(NAME)
 
 re: fclean
-		$(MAKE)
+	$(MAKE)
 
-.PHONY: all bonus clean fclean re
-.SILENT: test
+.PHONY: all clean fclean re

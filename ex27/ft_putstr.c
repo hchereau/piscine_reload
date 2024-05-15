@@ -6,7 +6,7 @@
 /*   By: hucherea <hucherea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 20:43:06 by hchereau          #+#    #+#             */
-/*   Updated: 2024/05/14 16:21:11 by hucherea         ###   ########.fr       */
+/*   Updated: 2024/05/14 19:42:02 by hucherea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,11 @@ static int	ft_strlen(char *str)
 		++i;
 	}
 	return (i);
+}
+
+void	ft_putstr_error(char *str)
+{
+	write(STDERR_FILENO, str, ft_strlen(str));
 }
 
 void	ft_putstr(char *str)

@@ -6,26 +6,25 @@
 /*   By: hucherea <hucherea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 19:02:38 by hucherea          #+#    #+#             */
-/*   Updated: 2024/05/14 14:11:22 by hucherea         ###   ########.fr       */
+/*   Updated: 2024/05/14 16:44:05 by hucherea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <aio.h>
 #include <unistd.h>
 
-size_t	ft_strlen(char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		++i;
-	return (i);
-}
+void	ft_putchar(char c);
 
 void	ft_putstr(char *str)
 {
-	write(1, str, ft_strlen(str));
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		ft_putchar(str[i]);
+		++i;
+	}
 }
 
 int	ft_strcmp(char *s1, char *s2)
@@ -74,7 +73,7 @@ int	main(int ac, char **av)
 	while (ac > 0)
 	{
 		ft_putstr(av[ac]);
-		write(STDOUT_FILENO, "\n", 1);
+		ft_putchar('\n');
 		--ac;
 	}
 }

@@ -28,11 +28,11 @@ CFLAGS += -Wextra
 all: $(NAME)
 
 $(NAME): $(OBJS)
-		$(CC) $(CFLAGS) $(OBJS) -o $(NAME) $(INCLUDES)
+		$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 $(OBJS): $(PATH_OBJS)/%.o: %.c $(HEADER)
 		mkdir -p $(PATH_OBJS)
-		$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDES)
+		$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	$(RM) -r $(PATH_OBJS)

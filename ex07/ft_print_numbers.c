@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hchereau <hchereau@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hucherea <hucherea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 16:26:57 by hchereau          #+#    #+#             */
-/*   Updated: 2024/05/11 16:30:20 by hchereau         ###   ########.fr       */
+/*   Updated: 2024/05/14 17:43:57 by hucherea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_print_numbers(void)
 {
 	char	c;
 
-	c = '1';
+	c = '0';
 	while (c <= '9')
 	{
 		ft_putchar(c);

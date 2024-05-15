@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hucherea <hucherea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/02 17:32:28 by imback            #+#    #+#             */
-/*   Updated: 2024/05/14 14:09:29 by hucherea         ###   ########.fr       */
+/*   Created: 2024/02/19 15:37:55 by hucherea          #+#    #+#             */
+/*   Updated: 2024/05/14 18:56:30 by hucherea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-
-# include <aio.h>
-# include <unistd.h>
-
-void	ft_putchar(char c);
-void	ft_putstr(char *str);
-int		ft_strlen(char *str);
-int		ft_strcmp(char *s1, char *s2);
-void	ft_swap(int *a, int *b);
-
-#endif
+int	ft_recursive_factorial(int nb)
+{
+	if (nb > 12)
+		return (0);
+	else if (nb == 1 || nb == 0)
+		return (1);
+	else if (nb < 0)
+		return (0);
+	else
+		return (nb * ft_recursive_factorial(nb - 1));
+}

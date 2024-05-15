@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hchereau <hchereau@student.42.fr>          +#+  +:+       +#+        */
+/*   By: hucherea <hucherea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 16:21:58 by hchereau          #+#    #+#             */
-/*   Updated: 2024/05/11 16:29:44 by hchereau         ###   ########.fr       */
+/*   Updated: 2024/05/14 16:33:47 by hucherea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_print_alphabet(void)
 	char	c;
 
 	c = 'a';
-	while (c <= 'Z')
+	while (c <= 'z')
 	{
 		ft_putchar(c);
 		++c;
